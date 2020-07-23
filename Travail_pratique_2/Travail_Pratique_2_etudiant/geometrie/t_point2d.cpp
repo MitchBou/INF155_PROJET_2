@@ -98,4 +98,53 @@ int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
 		return 0;
 	}
 }
-//TEST
+//Ce sous-programme public détermine si deux points sont alignés sur une même ligne verticale.
+int point_sur_la_meme_colonne(const ptr_point2d p1, const ptr_point2d p2)
+{
+	if (fabs(p1->x - p2->x) < 0.00001)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+//Ce sous - programme public calcule la distance entre deux points.
+double distance_entre_points(const ptr_point2d p1, const ptr_point2d p2)
+{
+	double distance;
+	double deltaX_carree;
+	double deltaY_carree;
+
+	deltaX_carree = (p2->x - p1->x) * (p2->x - p1->x);
+	deltaY_carree = (p2->y - p1->y) * (p2->y - p1->y);
+	distance = sqrt(deltaX_carree + deltaY_carree);
+
+	return distance;
+}
+//Ce sous-programme public détermine si deux points sont considérés comme étant identiques.
+int points_sont_identiques(const ptr_point2d p1, const ptr_point2d p2)
+{
+	if (fabs(p1->y - p2->y) < 0.00001)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+double distance_entre_points(const ptr_point2d p1, const ptr_point2d p2)
+{
+	double pente;
+	double deltaX;
+	double deltaY;
+
+	deltaX = ;
+	deltaY = ;
+	pente = deltaX / deltaY;
+
+	return pente;
