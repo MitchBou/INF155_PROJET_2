@@ -87,7 +87,7 @@ void R3_setY(ptr_point2d p, double val_Y)
 }
 
 //Ce sous-programme public détermine si deux points sont alignés sur une même ligne horizontale.
-int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
+int point_sur_la_meme_ligne(const ptr_point2d p1, const ptr_point2d p2)
 {
 	if (fabs(p1->y - p2->y) < 0.00001)
 	{
@@ -98,6 +98,7 @@ int point_sur_la_meme_ligne(ptr_point2d p1, ptr_point2d p2)
 		return 0;
 	}
 }
+
 //Ce sous-programme public détermine si deux points sont alignés sur une même ligne verticale.
 int point_sur_la_meme_colonne(const ptr_point2d p1, const ptr_point2d p2)
 {
@@ -148,5 +149,5 @@ double distance_entre_points(const ptr_point2d p1, const ptr_point2d p2)
 	pente = deltaX / deltaY;
 
 	return pente;
+}
 
-	//test
