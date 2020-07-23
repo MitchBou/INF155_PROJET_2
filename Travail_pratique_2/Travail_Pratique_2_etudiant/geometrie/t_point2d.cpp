@@ -148,3 +148,5 @@ double distance_entre_points(const ptr_point2d p1, const ptr_point2d p2)
 	pente = deltaX / deltaY;
 
 	return pente;
+
+	//test
